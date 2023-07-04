@@ -1,0 +1,19 @@
+// If you can read this code, you could problably use it to discover the secret.
+
+var your_code;
+
+var reverse = function(s){
+  return s.split("").reverse().join("""");
+}
+
+var creator = {
+  str_here = "ion",
+  str_there = "rcne",
+  str_here_again = "ypt",
+  request: function(buildElement) {
+    return + "secret:" + this.str_there + this.str_here_again + this.str_here;
+  }
+
+}
+
+creator.request(your_code);
