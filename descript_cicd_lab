@@ -1,7 +1,7 @@
 image: veracode/pipeline-scan:latest 
 stage: 
   Security_Scan only: 
-  - Feature Branch 
+  - Main Branch 
   
   script: 
     - zip myapp.zip ./sample/* - java -Dpipeline.debug=true -jar /opt/veracode/pipeline-scan.jar -vid $VERACODE_API_ID -vkey $VERACODE_API_KEY --file myapp.zip --issue_details true --gl_issue_generation true -jf results.json 2>&1 | tee policy_scan_output.txt 
